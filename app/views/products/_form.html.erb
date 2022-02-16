@@ -1,0 +1,15 @@
+<%= form_with(model: product) do |form| %>
+  <div class="form-input-wrapper">
+    <div style="display: block; margin-bottom: 5px">
+      <%= form.label :name, "Product Name", {style: "display: block; margin-bottom: 5px"} %>
+      <%= form.text_field :name, { class: "input"} %>
+    </div>
+    <div style="display: block; margin-bottom: 5px">
+      <%= form.label(:category, "Category", {style: "display: block; margin-bottom: 5px"} ) %>
+      <%= form.select(:categories, categories.collect { |category| [category.name, category.id] }, { selected: selectedCategories, include_blank: "----categories----", include_hidden: false}, {class: "select select-multiple", multiple: true}) %>
+    </div>
+  </div>
+  <div class="button-wrapper button-position-start">
+    <%= form.submit "#{ product.id ? "Update": "Create"}", { class: "button-box bigger-button-box"}%>
+  </div>
+<% end %>

@@ -1,0 +1,143 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ html,
+ body {
+   height: 100%
+ }
+ table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr{
+  max-height: 35px;
+  width: 800px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.container{
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 800px;
+  margin: auto;
+  align-items: center;
+}
+.content-wrapper{
+  margin: 20px;
+}
+.login-card{
+  display: flex;
+  flex-direction: column;
+}
+.input-box{
+  margin-bottom: 5px;
+  display: flex;
+}
+.label-box{
+  width: 100px
+}
+.button-wrapper{
+  display: flex;
+  justify-content: space-evenly;
+  height: 70px;
+  width: 100%;
+  align-items: center;
+}
+.pagination-wrapper{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.page{
+  padding: 2px;
+}
+.page-cursor{
+  cursor: pointer !important;
+}
+.long-button-width{
+  width: 100px !important;
+}
+.longer-button-width{
+  width: 150px !important;
+}
+.empty-style-link-to{
+  color: none;
+  cursor: default;
+  text-decoration: none;
+}
+.item-wrapper{
+  height: 210px;
+  width: 100%;
+}
+.form-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  width: 100%;
+}
+.button-box{
+  height: 30px;
+  width: 70px;
+  display: inline-block;
+  border-radius: 1.5px;
+  border: 1px solid rgba(240, 240, 245, .5);
+  background-color: #EFEFEF;
+  padding: 1px 6px;
+  text-align: center;
+  line-height: 30px;
+}
+.bigger-button-box{
+  height: 50px !important;
+  width: 90px !important;
+  border-radius: 5px !important;
+  font-size: 18px;
+}
+.button-position-start{
+  justify-content: start !important;
+}
+.text-overflow-control{
+  white-space: nowrap;
+  width: 555px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 520px;
+}
+.input{
+  border-radius: 5px;
+  height: 30px;
+  width: 325px;
+}
+.select{
+  border-radius: 5px;
+  height: 47px;
+  width: 334px;
+}
+.select-multiple{
+  height: 135px;
+}
+.form-input-wrapper{
+  margin-bottom: 14px;
+}

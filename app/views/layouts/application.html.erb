@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyCloudFulfillment</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="container">
+    <div>
+      <% if current_user %>
+        <%= link_to "Log Out", logout_path %>
+      <% end %>
+    </div>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<div>
+  <h1>Log In</h1>
+  <p style="color: red"><%= notice %></p>
+</div>
+<%= form_with url: "/sessions", method: :post do |form| %>
+  <div class="login-card">
+    <div class="content-wrapper">
+      <div class="input-box">
+        <div class="label-box">
+        <%= form.label :username %>
+        </div>
+        <%= form.text_field :username %>
+      </div>
+      <div class="input-box">
+        <div class="label-box">
+          <%= form.label :password %>
+        </div>
+        <%= form.text_field :password %>
+      </div>
+    </div>
+    <div class="button-wrapper">
+      <%= form.submit "Log In", { class: "button-box"}%>
+      <div class="button-box">
+        <%= link_to "Sign Up", new_user_path, { class: "empty-style-link-to"} %>
+      </div>
+    </div>
+  </div>
+<% end %>

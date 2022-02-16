@@ -1,0 +1,6 @@
+<tr id="<%= dom_id product %>">
+  <td><%= order%> </td>
+  <td><%= product.name %></td>
+  <td class="text-overflow-control"><%= display_categories(product) %> </td>
+  <td><%= link_to "Edit", edit_product_path(product) %>, <%= link_to "Destroy", "#{remove_product_path}?id=#{product.id}" %> </td>
+</tr>

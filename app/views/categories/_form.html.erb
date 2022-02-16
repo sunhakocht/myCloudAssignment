@@ -1,0 +1,15 @@
+<%= form_with url: "/categories", method: :post do |form| %>
+  <div class="form-input-wrapper">
+    <div style="display: block; margin-bottom: 5px">
+      <%= form.label :name, "Category Name", {style: "display: block; margin-bottom: 5px"} %>
+      <%= form.text_field :name, { class: "input"} %>
+    </div>
+    <div style="display: block; margin-bottom: 5px">
+      <%= form.label(:parentCategory, "Parent Category", {style: "display: block; margin-bottom: 5px"} ) %>
+      <%= form.select(:parent_category, categories.collect { |category| [category.name, category.id] }, { include_blank: "-"}, {class: "select"}) %>
+    </div>
+  </div>
+  <div class="button-wrapper button-position-start">
+    <%= form.submit "Create", { class: "button-box bigger-button-box"}%>
+  </div>
+<% end %>

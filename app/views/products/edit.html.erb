@@ -1,0 +1,10 @@
+<h1>Update product information</h1>
+<p style="color: red"><%= notice %></p>
+<div class="form-wrapper">
+  <%= render "form", product: @product, categories: @categories, selectedCategories: @selectedCategories %>
+</div>
+<div class="button-wrapper">
+  <div class="button-box longer-button-width">
+    <%= link_to "Back to product", products_path, { class: "empty-style-link-to"} %>
+  </div>
+</div>

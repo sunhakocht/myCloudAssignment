@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Categories</h1>
+<div class="item-wrapper">
+  <table id="Categories">
+    <tr>
+      <th>#</th>
+      <th>name</th>
+      <th>children</th>
+    </tr>
+    <% @categories.each_with_index do |category, i| %>
+        <%= render category, order: @offset+(i+1) %>
+    <% end %>
+  </table>
+</div>
+<div class="pagination-wrapper">
+  <% @pageList.each do |page_num| %>
+    <div class="page">
+      <%= link_to "#{page_num}", "#{categories_path}?page=#{page_num}", { class: "empty-style-link-to page-cursor"} %>
+    </div>
+  <% end %>
+</div>
+<div class="button-wrapper">
+  <div class="button-box long-button-width">
+    <%= link_to "New category", new_category_path, { class: "empty-style-link-to"} %>
+  </div>
+  <div class="button-box long-button-width">
+    <%= link_to "Products", products_path, { class: "empty-style-link-to"} %>
+  </div>
+</div>
